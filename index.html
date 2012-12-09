@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta property="og:title" content="Biologic: A Playful Social Network Browser for iPad by Bloom Studio, Inc." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://biologic.bloom.io" />
+  <meta property="og:image" content="http://biologic.bloom.io/images/icon.png" />
+  <meta property="og:site_name" content="Biologic for iPad by Bloom Studio, Inc." />
+  <meta property="fb:admins" content="659436583, 2913134, 510008187" />
+  <meta property="og:description"
+        content="A playful and engaging way to explore updates from your friends on Twitter, Facebook and LinkedIn. Available only on iPad." />
+  <title>Biologic: A Playful Social Network Browser for iPad by Bloom Studio, Inc.</title>
+  <script src="http://use.typekit.com/rdl4muo.js"></script>
+  <script>
+    // <3 Small Batch
+    try{Typekit.load();}catch(e){}
+    // :-p Google
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20672308-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!--[if lt IE 9]><script src="js/html5-pre3.5.js"></script><![endif]-->
+  <style>
+/*------------------------------------*\
+  RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE:WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+  display:block;
+}
+body{
+  line-height:1;
+}
+ol,ul{
+  list-style:none;
+}
+blockquote,q{
+  quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+  content:'';
+  content:none;
+}
+/* remember to define visible focus styles!
+:focus{
+  outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+  text-decoration:none;
+}
+del{
+  text-decoration:line-through;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/*------------------------------------*\
+  MAIN
+\*------------------------------------*/
+/* GO! */
+
+body {
+  font-family: "ff-unit-rounded-web-1","ff-unit-rounded-web-2",sans-serif;
+  background: #B4C7D6 repeat-x url('images/background.png');
+  color: #102;
+  width: 100%;
+  line-height:1.25;
+}
+#biologic {
+  position: relative;
+  width: 960px;
+  margin: 0px auto;
+}
+#cells {
+  width: 100%;
+  position: relative;
+  background: url('images/cells/BG_CellA.png') no-repeat 50% -385px,
+              url('images/body/MG_CellC.png') no-repeat 800px 400px,
+              url('images/body/MG_CellD.png') no-repeat -200px 600px,
+              url('images/body/MG_CellE.png') no-repeat 600px bottom;
+}
+h2, h3 {
+  text-transform: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+header {
+  height: 250px;
+  position: relative;
+  margin: 0px 100px 0px 100px;
+  padding: 1px 100px 1px 100px;
+  background: url('images/cells/Title_Cell.png') no-repeat 75px -93px;
+  color: #fff;
+  text-shadow: #110850 0px 0px 12px, #110850 0px 0px 6px;
+}
+header h1 {
+  font-size: 90px;
+  letter-spacing: -2px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 20px 0px;
+  /*background: no-repeat url('images/cells/MG_CellB.png') 0px 0px;*/
+  text-align: left;
+}
+#download {
+  position: absolute;
+  right: 100px;
+  top: 37px;
+}
+#download a.button {
+  display: block;
+  height: 44px;
+  width: 220px;
+  line-height: 42px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fff;
+  color: #449;
+  text-align: center;
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 0px 15px #ff9;
+  -moz-box-shadow:    0px 0px 15px #ff9;
+  -ms-box-shadow:     0px 0px 15px #ff9;
+  -o-box-shadow:      0px 0px 15px #ff9;
+  box-shadow: 0px 0px 15px #ff9;
+  text-shadow: #ff9 0px 0px 12px, #ff9 0px 0px 6px;
+  font-size: 24px;
+}
+#download a.button:hover {
+  -webkit-box-shadow: 0px 0px 25px #ff9;
+  -moz-box-shadow:    0px 0px 25px #ff9;
+  -ms-box-shadow:     0px 0px 25px #ff9;
+  -o-box-shadow:      0px 0px 25px #ff9;
+  box-shadow: 0px 0px 25px #ff9;
+  text-shadow: #ff9 0px 0px 16px, #ff9 0px 0px 8px;
+}
+#download .tweetlike {
+  margin: 10px 0px 0px 5px;
+}
+
+#about {
+  padding: 0;
+  margin: 0 100px;
+  border-radius: 10px;
+  box-shadow: rgba(255,255,255,0.15) 0px 0px 16px;
+  background-color: rgba(255,255,255,0.15);
+  border: 1px solid rgba(200,200,200,0.3);
+}
+#about h2 {
+  position: relative;
+  font-size: 36px;
+  display: block;
+  margin: 50px 0px 15px 100px;
+  text-align: left;
+}
+/*#about h3 {
+  text-shadow: rgba(255,255,255,0.75) 0px 0px 16px, rgba(255,255,255,0.75) 0px 0px 12px, rgba(255,255,255,0.75) 0px 0px 8px, rgba(255,255,255,0.75) 0px 0px 4px;
+}*/
+#about p {
+  font-weight: 300;
+  font-size: 16px;
+  width: 300px;
+}
+#services {
+  background: url('images/about/FG_Services.png') no-repeat 20px top;
+  padding: 150px 0px 35px 250px;
+  margin: 20px 0px 15px 80px;
+}
+#people {
+  background: url('images/about/FG_Users.png') no-repeat 180px top;
+  padding: 10px 0px 30px 300px;
+  margin: 0px 0px 20px 30px;
+}
+#updates {
+  background: url('images/about/FG_Activities.png') no-repeat 210px top;
+  padding: 10px 0px 30px 330px;
+  margin: 0px 0px 20px 0px;
+}
+/*    #more {
+  position: absolute;
+  top: 260px;
+  left: 500px;
+  width: 425px;
+  height: 250px;
+} */
+
+#gallery {
+  position: relative;
+  display: block;
+}
+#gallery p {
+  position: relative;
+  margin: 10px 0 0 0;
+}
+#gallery ul {
+  position: relative;
+  display: block;
+  margin: 10px 0 0 0;
+  list-style: none;
+}
+#gallery li {
+  position: relative;
+  display: inline-block;
+  margin-right: 25px;
+  margin-top: 15px;
+}
+#gallery a, #gallery img {
+  position: relative;
+  display: block;
+}
+
+footer {
+  padding: 0 100px 50px 100px;
+  height: 125px;
+  position: relative;
+}
+#appstore, #credit, #copyright {
+  display: inline-block;
+  width: 33%;
+}
+
+#appstore {
+  text-align: center;
+}
+#appstore img {
+  margin-bottom: -3px;
+}
+#credit img#libcinder {
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+#credit img#fmod {
+  vertical-align: bottom;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+#credit {
+  padding-bottom: 5px;
+  text-align: right;
+}
+#copyright {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #102;
+}
+#copyright a {
+  color: #236;
+  text-decoration: underline;
+}
+
+section.text {
+  position: relative;
+  display: block;
+  margin: 50px 100px 50px 100px;
+  padding: 50px 100px;
+  border-radius: 10px;
+  box-shadow: rgba(255,255,255,0.15) 0px 0px 16px;
+  background-color: rgba(255,255,255,0.15);
+  border: 1px solid rgba(200,200,200,0.3);
+  clear: both;
+}
+section.text h2 {
+  position: relative;
+  font-size: 36px;
+  display: block;
+  margin: 0px 0px 15px 0px;
+  text-align: left;
+}
+section.text h4 {
+  margin: 20px 0px 0px 0px;
+  font-weight: 400;
+  font-size: 18px;
+}
+section.text h4 a {
+  color: #102;
+  text-decoration: none;
+}
+section.text a {
+  color: #236;
+}
+section.text p {
+  margin: 20px 0px 0px 0px;
+}
+section.text div.answer p {
+  margin: 10px 0px 0px 20px;
+}
+section.text p.cta {
+  margin: 40px 0px 40px 0px;
+}
+section.text blockquote {
+  display: block;
+  margin: 10px 0px 0px 50px;
+  color: #213;
+}
+
+nav {
+  text-align: center;
+  margin: 0 0 50px 0px;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: rgba(255,255,255,0.15) 0px 0px 16px;
+  background-color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,200,0.5);
+  clear: both;
+  color: #236;
+}
+nav li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #236;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div id="cells"><div id="biologic">
+
+    <header>
+      <h1>Biologic</h1>
+      <div id="download">
+        <a class="button" href="http://itunes.apple.com/us/app/biologic/id482155874?mt=8">Free Download</a>
+        <div class="tweetlike">
+          <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://biologic.bloom.io" data-count="horizontal">Tweet</a>
+          <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbiologic.bloom.io&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="http://itunes.apple.com/us/app/biologic/id482155874?mt=8">Download</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2>Social Network, Meet Physics Engine.</h2>
+      <p></p>
+      <div id="services">
+        <h3>Explore Different Services</h3>
+        <p>Biologic supports three services equally: Twitter, Facebook and LinkedIn. Wherever your friends are posting, you can keep up with them using Biologic.</p>
+      </div>
+      <div id="people">
+        <h3>Who Posts The Most?</h3>
+        <p>After selecting a service, each cell in Biologic represents a person. People who have posted more content recently have bigger cells.</p>
+      </div>
+      <div id="updates">
+        <h3>See What's Important</h3>
+        <p>Each particle inside a cell represents a recent update from that cell's user. Tap an update to read it, follow links and find updates with different media such as photos, videos, links and check-ins.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="text">
+      <h2>Gallery</h2>
+      <ul>
+        <li><a href="images/gallery/bloom_biologic_0.jpg" target="_blank"><img src="images/gallery/thumb_0.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+        <li><a href="images/gallery/bloom_biologic_1.jpg" target="_blank"><img src="images/gallery/thumb_1.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+        <li><a href="images/gallery/bloom_biologic_2.jpg" target="_blank"><img src="images/gallery/thumb_2.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+        <li><a href="images/gallery/bloom_biologic_3.jpg" target="_blank"><img src="images/gallery/thumb_3.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+        <li><a href="images/gallery/bloom_biologic_4.jpg" target="_blank"><img src="images/gallery/thumb_4.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+        <li><a href="images/gallery/bloom_biologic_5.jpg" target="_blank"><img src="images/gallery/thumb_5.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+        <li><a href="images/gallery/bloom_biologic_6.jpg" target="_blank"><img src="images/gallery/thumb_6.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+        <li><a href="images/gallery/bloom_biologic_7.jpg" target="_blank"><img src="images/gallery/thumb_7.jpg" width="96" height="128" alt="Biologic screenshot"></a></li>
+      </ul>
+      <p><a href="bloom-biologic-gallery.zip">Download these screenshots in a zip file.</a></p>
+     </section>
+
+    <section id="faq" class="text">
+      <h2>F.A.Q.</h2>
+
+      <p class="cta">Select a question to reveal the answer (or <a href="#" id="showall">show everything</a>). If you don't see your question listed, please <a href="mailto:biologic@bloom.io">email us</a> and we'll try to get back to you as quickly as we can!</p>
+
+      <h4 id="logout"><a href="#logout">How do I log out?</a></h4>
+      <div class="answer">
+        <p>You can log out of Biologic on your iOS device by tapping the (i) button in the top right of Biologic and tapping the "Log Out" button. After doing so you'll need to authenticate with our servers again the first time you select a service.</p>
+      </div>
+
+      <h4 id="quit"><a href="#quit">How do I delete my account? How do I remove a service?</a></h4>
+      <div class="answer">
+        <p>You can <a href="http://api.bloom.io">log into our API</a> using your web browser and remove any services you don't want to use with Biologic. If you remove all services your account will be deleted. Alternatively, email <a href="mailto:privacy@bloom.io?subject=account%20deletion%20request">privacy@bloom.io</a> with your Twitter/Facebook/LinkedIn ID and we'll remove all your data as soon as we can.</p>
+      </div>
+
+      <h4 id="devices"><a href="#devices">Does Biologic work on iPhone/iPod/Android?</a></h4>
+      <div class="answer">
+        <p>Biologic is iPad-only for the time being. It is functional on the original iPad but best on newer iPads. We plan to release versions of Biologic for other platforms in future but we don't have firm dates available yet.</p>
+      </div>
+
+      <h4 id="ios4"><a href="#ios4">Does Biologic work with iOS 4?</a></h4>
+      <div class="answer">
+        <p>Unfortunately not. We're using the latest and greatest features of iOS 5 so Biologic won't work on iOS 4, sorry.</p>
+      </div>
+
+      <h4 id="google"><a href="#google">Does Biologic work with Google+?</a></h4>
+      <div class="answer">
+        <p>Sadly no. We'd love to support Google+ but the service doesn't yet have an API (Application Programmer Interface) that we can use to get your friends into Biologic. We're ready for Google+ when Google is!</p>
+      </div>
+
+    </section>
+
+    <section id="credits" class="text">
+
+      <h2>Credits</h2>
+
+      <p>Biologic is an app for the iPad made by <a href="http://bloom.io">Bloom Studio, Inc.</a> in San Francisco. Our first app, <a href="http://planetary.bloom.io">Planetary</a>, is a music player that transforms your iTunes library into a 3D galaxy.</p>
+
+      <p>Biologic's sound design is by <a href="http://www.emilyindustries.com/">Emily Ridgway</a>. The back-end systems were architected and built with the help of <a href="http://mojodna.net/">Seth Fitzsimmons</a> and <a href="http://iconocla.st/">Schuyler Erle</a>.</p>
+
+      <p>Biologic is made with <a href="http://libcinder.org">Cinder</a> and <a href="http://fmod.org">FMOD</a>.</p>
+
+    </section>
+
+    <footer>
+      <p id="copyright">&copy; Copyright 2012 Bloom Studio, Inc.<br>All Rights Reserved.<br><a href="terms.html">Terms of Use</a>. <a href="privacy.html">Privacy Policy</a>. <a href="mailto:biologic@bloom.io">Contact Us</a>.</p>
+      <p id="appstore"><a href="http://itunes.apple.com/us/app/biologic/id482155874?mt=8"><img src="images/appStoreBadge.png" alt="Available on the App Store" width="192" height="68"></a></p>
+      <p id="credit"><a href="http://fmod.org"><img id="fmod" src="images/fmod.png" alt="fmod®" width="115" height="32"></a> <a href="http://libcinder.org"><img id="libcinder" src="images/madeWithCinder.png" alt="Cinder" width="98" height="127"></a></p>
+    </footer>
+
+  </div></div>
+
+  <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+  <!-- thank you! http://neteye.github.com/touch-gallery.html -->
+  <!-- script type="text/javascript" src="js/jquery.touch-gallery-1.0.0.min.js"></script-->
+  <script>
+
+    // gallery: activate!
+    $(function() {
+
+      //$('#gallery a').touchGallery();
+
+      // collapse the overlong FAQs
+      $('.answer').hide();
+
+      // but allow to reveal all, for people who like to be thorough
+      $('#showall').click(function() {
+        $('.answer').slideDown();
+        return false;
+      });
+
+      // or reveal one at a time
+      $('#faq h4 a').click(function() {
+        $(this).parent().next('.answer').slideToggle();
+        return false;
+      });
+
+      // and if we came here with a #fragment, make sure it's open already
+      $(location.hash).next('.answer').show();
+
+    });
+
+  </script>
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</body>
+</html>
